@@ -1,2 +1,2 @@
-# overthewire
+# OverTheWire
 Solving the OverTheWire challenges
