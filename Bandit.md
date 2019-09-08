@@ -213,11 +213,93 @@ password: `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`
 
 **Solution:**
 
+    ssh bandit14@localhost -i sshkey.private
+    cat /etc/bandit_pass/bandit14
+
 ## Level 14
 
 **Credentials:**
 
 `ssh bandit.labs.overthewire.org -p 2220 -l bandit14`
+
+password: `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`
+
+**Solution:**
+
+    cat /etc/bandit_pass/bandit14 | nc localhost 30000
+
+## Level 15
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit15`
+
+password: `BfMYroe26WYalil77FoDi9qh59eK5xNr`
+
+**Solution:**
+
+    cat /etc/bandit_pass/bandit15 | openssl s_client -connect localhost:30001 -quiet
+
+## Level 16
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit16`
+
+password: `cluFn7wTiGryunymYOu4RcffSxQluehd`
+
+**Solution:**
+
+    nc -zv localhost 31000-32000
+    cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet
+
+## Level 17
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit17 -i sshkey17.private`
+
+INFO: Use `chmod 600 sshkey17.private` if not accepted.
+
+password: [RSA_PRIVATE_KEY](./sshkey17.private)
+
+**Solution:**
+
+## Level 18
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 19
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 20
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 21
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
 
 password: ``
 
