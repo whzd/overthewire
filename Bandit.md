@@ -378,33 +378,32 @@ password: `UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ`
 
 THE SCRIPT CREATED CAN BE FOUND [HERE](./bandit25.sh).
 
-## Level 25
+## Level 25 & Level 26
 
 **Credentials:**
 
 `ssh bandit.labs.overthewire.org -p 2220 -l bandit25`
 
-password: `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+password25: `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
 
 **Solution:**
 
-## Level 26
-
-**Credentials:**
-
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit26`
-
-password: ``
-
-**Solution:**
+    cat /etc/passwd | grep bandit26
+    cat /usr/bin/showtext
+    RESIZE THE TERMINAL WINDOW SO THAT 'MORE' WON'T FULLY LOAD THE TEXT.
+    ssh -i bandit26.sshkey bandit26@localhost
+    v
+    :set shell=/bin/bash
+    :shell
+    ./bandit27-do cat /etc/bandit_pass/bandit27
 
 ## Level 27
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit27`
 
-password: ``
+password: `3ba3118a22e93127a4ed485be72ef5ea`
 
 **Solution:**
 
