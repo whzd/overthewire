@@ -12,7 +12,6 @@ password: `bandit0`
 
 **Solution:**
 
-    ls
     cat readme
 
 ## Level 1
@@ -25,7 +24,6 @@ password: `boJ9jbbUNNfktd78OOpsqOltutMc3MY1`
 
 **Solution:**
 
-    ls
     cat ./-
 
 ## Level 2
@@ -38,7 +36,6 @@ password: `CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9`
 
 **Solution:**
 
-    ls
     cat "spaces in this filename"
 
 ## Level 3
@@ -51,7 +48,6 @@ password: `UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK`
 
 **Solution:**
 
-    ls
     cat inhere/.hidden
 
 ## Level 4
@@ -64,7 +60,6 @@ password: `pIwrPrtPN36QITSp3EQaw936yaFoFgAB`
 
 **Solution:**
 
-    ls
     find inhere/ -type f -exec file '{}' \;
     (ALTERNATIVE: find inhere/ -type f | xargs file | grep ASCII)
     cat inhere/-file07
@@ -79,7 +74,6 @@ password: `koReBOKuIDDepwhWk7jZC0RTdopnAYKh`
 
 **Solution:**
 
-    ls
     find inhere/ -type f -size 1033c ! -executable -exec file '{}' \;
     (ALTERNATIVE: find inhere/ -type f -size 1033c ! -executable | xargs file | grep ASCII)
     cat inhere/maybehere07/.file2
@@ -107,7 +101,6 @@ password: `HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs`
 
 **Solution:**
 
-    ls
     cat data.txt | grep millionth
 
 ## Level 8
@@ -120,7 +113,6 @@ password: `cvX2JJa4CFALtqS87jk27qwqGhBM9plV`
 
 **Solution:**
 
-    ls
     sort data.txt | uniq -u
 
 ## Level 9
@@ -133,7 +125,6 @@ password: `UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR`
 
 **Solution:**
 
-    ls
     strings data.txt | grep ==.
 
 ## Level 10
@@ -146,7 +137,6 @@ password: `truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk`
 
 **Solution:**
 
-    ls
     base64 -d data.txt
 
 ## Level 11
@@ -159,7 +149,6 @@ password: `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
 
 **Solution:**
 
-    ls
     cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ## Level 12
@@ -265,37 +254,151 @@ password: [RSA_PRIVATE_KEY](./sshkey17.private)
 
 **Solution:**
 
+    diff passwords.old passwords.new
+
 ## Level 18
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit18`
 
-password: ``
+password: `kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`
 
 **Solution:**
+
+    ssh bandit.labs.overthewire.org -p 2220 -l bandit18 -t 'cat readme'
 
 ## Level 19
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit19`
 
-password: ``
+password: `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`
 
 **Solution:**
+
+    ./bandit20-do
+    ./bandit20-do cat /etc/bandit_pass/bandit20
 
 ## Level 20
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit20`
+
+password: `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
+
+**Solution:**
+
+    screen
+
+    SCREEN1:
+    screen
+    cat /etc/bandit_pass/bandit20 | nc -l -p 16969
+
+    SCREEN2:
+    ./suconnect 16969
+
+## Level 21
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit21`
+
+password: `gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`
+
+**Solution:**
+
+    ls /etc/cron.d
+    cat /etc/cron.d/cronjob_bandit22
+    cat /usr/bin/cronjob_bandit22.sh
+    cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+## Level 22
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit22`
+
+password: `Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`
+
+**Solution:**
+
+    ls /etc/cron.d/
+    cat /usr/bin/cronjob_bandit23.sh
+    echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+    cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+## Level 23
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit23`
+
+password: `jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n`
+
+**Solution:**
+
+    ls /etc/cron.d
+    cat /etc/cron.d/cronjob_bandit24
+    cat /usr/bin/cronjob_bandit24.sh
+    mkdir -p /tmp/testxs
+    cd /tmp/testxs
+    vim bandit24.sh
+    chmod 777 bandit24.sh
+    touch pw24.txt
+    chmod 666 pw24.txt
+    cp bandit24.sh /var/spool/bandit24
+    (WAIT 1 MINUTE)
+    cat pw24.txt
+
+THE SCRIPT CREATED CAN BE FOUND [HERE](./bandit24.sh).
+
+## Level 24
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit24`
+
+password: `UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ`
+
+**Solution:**
+
+    mkdir -p /tmp/qwerty24
+    cd /tmp/qwerty24
+    vim bandit25.sh
+    chmod 700 bandit25.sh
+    (OPTIONAL:
+    touch pin.txt
+    chmod 600 pin.txt)
+    ./bandit25.sh
+    (OPTIONAL:
+    cat pin.txt)
+
+THE SCRIPT CREATED CAN BE FOUND [HERE](./bandit25.sh).
+
+## Level 25
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit25`
+
+password: `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+
+**Solution:**
+
+## Level 26
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit26`
 
 password: ``
 
 **Solution:**
 
-## Level 21
+## Level 27
 
 **Credentials:**
 
@@ -305,7 +408,57 @@ password: ``
 
 **Solution:**
 
-## Level
+## Level 28
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 29
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 30
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 31
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 32
+
+**Credentials:**
+
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+
+password: ``
+
+**Solution:**
+
+## Level 33
 
 **Credentials:**
 
