@@ -461,23 +461,37 @@ password: `5b90576bedb2cc04c86a9e924ce42faf`
 
 **Solution:**
 
+    cat README.md
+    cat .git/packed-refs
+    git show-ref --tags -d
+    git show --name-only secret
+
 ## Level 31
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit31`
 
-password: ``
+password: `47e603bb428404d265f59c42920d81e5`
 
 **Solution:**
+
+    ls -la
+    cat README.md
+    cat .gitignore
+    rm -rf .gitignore
+    echo 'May I come in?' > key.txt
+    git add key.txt
+    git commit -m 'tst'
+    git push
 
 ## Level 32
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit32`
 
-password: ``
+password: `56a9bf19c63d650ce78e6ec0354ee45e`
 
 **Solution:**
 
@@ -488,5 +502,3 @@ password: ``
 `ssh bandit.labs.overthewire.org -p 2220 -l bandit`
 
 password: ``
-
-**Solution:**
