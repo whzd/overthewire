@@ -407,33 +407,57 @@ password: `3ba3118a22e93127a4ed485be72ef5ea`
 
 **Solution:**
 
+    mkdir -p /tmp/wsx27
+    cd /tmp/wsx27
+    git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+    cat repo/README
+
 ## Level 28
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit28`
 
-password: ``
+password: `0ef186ac70e04ea33b4c1853d2526fa2`
 
 **Solution:**
+
+    mkdir -p /tmp/wsx29
+    cd /tmp/wsx29
+    git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+    cat repo/README.md
+    cd repo/
+    git log
+    git checkout 186a1038cc54d1358d42d468cdc8e3cc28a93fcb
+    cat README.md
 
 ## Level 29
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit29`
 
-password: ``
+password: `bbc96594b4e001778eee9975372716b2`
 
 **Solution:**
+
+    mkdir -p /tmp/wsx029
+    cd /tmp/wsx029
+    git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+    cd repo/
+    cat README.md
+    git branch -a
+    git checkout remotes/origin/dev
+    ls
+    cat README.md
 
 ## Level 30
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit30`
 
-password: ``
+password: `5b90576bedb2cc04c86a9e924ce42faf`
 
 **Solution:**
 
