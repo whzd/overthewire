@@ -1,6 +1,6 @@
 # OverTheWire
 
-Solving the OverTheWire wargames.
+Solving the [OverTheWire](http://overthewire.org/wargames/) wargames.
 
 ## Table of content
 
