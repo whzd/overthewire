@@ -76,15 +76,29 @@ password: `vuH0coox6m`
 
 **Solution:**
 
+    ls -la
+    cd .trash
+    ./bin
+    CONVERT THE OUTPUT BINARY TO TEXT
+
 ## Level 5
 
 **Credentials:**
 
 `ssh leviathan.labs.overthewire.org -p 2223 -l leviathan5`
 
-password: ``
+password: `Tith4cokei`
 
 **Solution:**
+
+    ls -la
+    ./leviathan5
+    touch /tmp/file.log
+    ltrace ./leviathan5
+    echo 'wsx' > /tmp/file.log
+    ./leviathan5
+    ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+    ./leviathan5
 
 ## Level 6
 
@@ -92,6 +106,27 @@ password: ``
 
 `ssh leviathan.labs.overthewire.org -p 2223 -l leviathan6`
 
-password: ``
+password: `UgaoFee4li`
 
 **Solution:**
+
+    ls -la
+    file ./leviathan6
+    ltrace ./leviathan6
+    ltrace ./leviathan6 1234
+    mkdir -p /tmp/wsx6
+    cd /tmp/wsx6
+    vim exploit.sh
+    chmod 700 exploit.sh
+    ./exploit.sh
+    cat /etc/leviathan_pass/leviathan7
+
+THE SCRIPT CREATED CAN BE FOUND [HERE](./exploit.sh).
+
+## Level 7
+
+**Credentials:**
+
+`ssh leviathan.labs.overthewire.org -p 2223 -l leviathan7`
+
+password: `ahy7MaeBo9`
