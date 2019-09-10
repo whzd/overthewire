@@ -495,10 +495,15 @@ password: `56a9bf19c63d650ce78e6ec0354ee45e`
 
 **Solution:**
 
+    $0
+    file uppershell
+    ls -la
+    cat /etc/bandit_pass/bandit33
+
 ## Level 33
 
 **Credentials:**
 
-`ssh bandit.labs.overthewire.org -p 2220 -l bandit`
+`ssh bandit.labs.overthewire.org -p 2220 -l bandit33`
 
-password: ``
+password: `c9c3199ddf4121b10cf581a98d51caee`
